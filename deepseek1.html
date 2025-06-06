@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protection Needs Questionnaire Form</title>
-    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Adobe Typekit stylesheet for Proxima Nova -->
     <link rel="stylesheet" href="https://use.typekit.net/jin8lwo.css">
     <style>
         /* Custom styles using brand colors */
@@ -60,18 +58,14 @@
 </head>
 <body class="p-4 sm:p-6 lg:p-8">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 space-y-8">
-        <!-- Logo Banner -->
         <header class="text-center mb-8">
             <img src="images/placeholder-logo.png" alt="Company Logo" class="mx-auto h-16">
-            <!-- Replace 'placeholder-logo.png' with the actual path to your PNG or SVG logo -->
-        </header>
+            </header>
 
-        <!-- Title -->
         <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-8">Protection Needs Questionnaire</h1>
         <p class="text-gray-700 text-center mb-8">Please provide detailed answers to the following questions.</p>
 
 <form method="POST" action="https://script.google.com/macros/s/AKfycbwdKnfdTvGhRJmlIxgzHtfEti8MAw8BnhCn4nl--09I1rZTA9s4VEi78a1Ab11_LTNu/exec">
-        <!-- Section 1: Personal Information -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2" style="border-color: #2f3a22;">1. Personal Information</h2></h2>
             <div>
@@ -120,7 +114,6 @@
             </div>
         </section>
 
-        <!-- Section 2: GP & Medical Details -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">2. GP & Medical Details</h2>
             <div>
@@ -149,7 +142,6 @@
             </div>
         </section>
 
-        <!-- Section 3: Employment & Income -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">3. Employment & Income</h2>
             <div>
@@ -247,7 +239,6 @@
             </div>
         </section>
 
-        <!-- Section 4: Existing Protection Policies -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">4. Existing Protection Policies</h2>
             <div>
@@ -327,7 +318,6 @@
             </div>
         </section>
 
-        <!-- Section 5: Financial Responsibilities -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">5. Financial Responsibilities</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -373,7 +363,6 @@
             </div>
         </section>
 
-        <!-- Section 6: Cover Objectives -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">6. Cover Objectives</h2>
             <div>
@@ -419,7 +408,6 @@
             </div>
         </section>
 
-        <!-- Section 7: Health & Lifestyle -->
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">7. Health & Lifestyle</h2>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -491,107 +479,12 @@
                     </label>
                 </div>
                 <div class="mt-2">
-                    <label for="alcoholTreatmentDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="alcoholTreatmentDetails" name="alcoholTreatmentDetails" rows="2" class="form-textarea" placeholder="e.g., Attended AA for 6 months in 2019"></textarea>
+                    <label for="alcoholTreatmentDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                    <textarea id="alcoholTreatmentDetails" name="alcoholTreatmentDetails" rows="2" class="form-textarea" placeholder="e.g., Attended AA meetings 2022"></textarea>
                 </div>
             </div>
             <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Do you take regular prescription medication?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="prescriptionMedication" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="prescriptionMedication" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="prescriptionMedicationDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please list medications and conditions:</label>
-                    <textarea id="prescriptionMedicationDetails" name="prescriptionMedicationDetails" rows="3" class="form-textarea" placeholder="e.g., Lisinopril for high blood pressure"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you been diagnosed with or treated for any medical conditions in the past 5 years?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="medicalConditions5Years" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="medicalConditions5Years" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="medicalConditions5YearsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="medicalConditions5YearsDetails" name="medicalConditions5YearsDetails" rows="3" class="form-textarea" placeholder="e.g., Diagnosed with mild asthma in 2022, managed with inhaler"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you had surgery, hospitalisation, or referrals to specialists in the last 5 years?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="medicalProcedures5Years" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="medicalProcedures5Years" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="medicalProcedures5YearsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="medicalProcedures5YearsDetails" name="medicalProcedures5YearsDetails" rows="3" class="form-textarea" placeholder="e.g., Appendix removal in 2021, 3 days hospital stay"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Do you have any scheduled tests, scans, or investigations pending?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="pendingInvestigations" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="pendingInvestigations" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="pendingInvestigationsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="pendingInvestigationsDetails" name="pendingInvestigationsDetails" rows="2" class="form-textarea" placeholder="e.g., MRI scan scheduled for knee pain next month"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Do you suffer from any long-term or chronic conditions (e.g. asthma, diabetes, high blood pressure)?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="chronicConditions" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="chronicConditions" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="chronicConditionsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please specify:</label>
-                    <textarea id="chronicConditionsDetails" name="chronicConditionsDetails" rows="3" class="form-textarea" placeholder="e.g., Type 2 Diabetes, diagnosed 2015, managed with diet and medication"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Are you awaiting any diagnosis?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="awaitingDiagnosis" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="awaitingDiagnosis" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="awaitingDiagnosisDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="awaitingDiagnosisDetails" name="awaitingDiagnosisDetails" rows="2" class="form-textarea" placeholder="e.g., Investigating potential irritable bowel syndrome"></textarea>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Substance Use & Sensitive Medical History -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">8. Substance Use & Sensitive Medical History</h2>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever used recreational drugs (e.g. cannabis, cocaine, ecstasy, amphetamines, ketamine, LSD, or similar)?</label>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever used recreational drugs?</label>
                 <div class="flex items-center gap-4">
                     <label class="checkbox-label">
                         <input type="radio" name="recreationalDrugs" value="Yes" class="checkbox-input"> Yes
@@ -601,216 +494,113 @@
                     </label>
                 </div>
                 <div class="mt-2">
-                    <label for="recreationalDrugsDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please specify substances used, frequency, and date of last use:</label>
-                    <textarea id="recreationalDrugsDetails" name="recreationalDrugsDetails" rows="3" class="form-textarea" placeholder="e.g., Cannabis, weekly, last used 6 months ago"></textarea>
+                    <label for="recreationalDrugsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please specify frequency and date last used:</label>
+                    <textarea id="recreationalDrugsDetails" name="recreationalDrugsDetails" rows="2" class="form-textarea" placeholder="e.g., Cannabis, occasional use, last used 6 months ago"></textarea>
                 </div>
             </div>
             <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever misused prescription medication?</label>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Are you currently taking any prescribed medication?</label>
                 <div class="flex items-center gap-4">
                     <label class="checkbox-label">
-                        <input type="radio" name="misusedMedication" value="Yes" class="checkbox-input"> Yes
+                        <input type="radio" name="prescribedMedication" value="Yes" class="checkbox-input"> Yes
                     </label>
                     <label class="checkbox-label">
-                        <input type="radio" name="misusedMedication" value="No" class="checkbox-input"> No
+                        <input type="radio" name="prescribedMedication" value="No" class="checkbox-input"> No
                     </label>
                 </div>
                 <div class="mt-2">
-                    <label for="misusedMedicationDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="misusedMedicationDetails" name="misusedMedicationDetails" rows="2" class="form-textarea" placeholder="e.g., Took more painkillers than prescribed after surgery in 2020"></textarea>
+                    <label for="prescribedMedicationDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Medication name, dosage, condition):</label>
+                    <textarea id="prescribedMedicationDetails" name="prescribedMedicationDetails" rows="3" class="form-textarea" placeholder="e.g., Lisinopril, 10mg, High blood pressure"></textarea>
                 </div>
             </div>
             <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever received treatment or counselling for drug misuse or dependency?</label>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever been diagnosed with any medical conditions, illnesses, or undergone any significant surgeries?</label>
                 <div class="flex items-center gap-4">
                     <label class="checkbox-label">
-                        <input type="radio" name="drugTreatment" value="Yes" class="checkbox-input"> Yes
+                        <input type="radio" name="medicalConditions" value="Yes" class="checkbox-input"> Yes
                     </label>
                     <label class="checkbox-label">
-                        <input type="radio" name="drugTreatment" value="No" class="checkbox-input"> No
+                        <input type="radio" name="medicalConditions" value="No" class="checkbox-input"> No
                     </label>
                 </div>
                 <div class="mt-2">
-                    <label for="drugTreatmentDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="drugTreatmentDetails" name="drugTreatmentDetails" rows="2" class="form-textarea" placeholder="e.g., Attended a rehab program for 3 months in 2018"></textarea>
+                    <label for="medicalConditionsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Condition, date of diagnosis, treatment, ongoing impact):</label>
+                    <textarea id="medicalConditionsDetails" name="medicalConditionsDetails" rows="4" class="form-textarea" placeholder="e.g., Type 2 Diabetes, diagnosed 2015, managed with diet and metformin"></textarea>
                 </div>
             </div>
             <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever been diagnosed with or treated for a mental health condition (e.g. depression, anxiety, PTSD, bipolar disorder)?</label>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Do you have a family history of critical illness (e.g. cancer, heart disease, stroke) before age 60?</label>
                 <div class="flex items-center gap-4">
                     <label class="checkbox-label">
-                        <input type="radio" name="mentalHealthCondition" value="Yes" class="checkbox-input"> Yes
+                        <input type="radio" name="familyHistory" value="Yes" class="checkbox-input"> Yes
                     </label>
                     <label class="checkbox-label">
-                        <input type="radio" name="mentalHealthCondition" value="No" class="checkbox-input"> No
+                        <input type="radio" name="familyHistory" value="No" class="checkbox-input"> No
                     </label>
                 </div>
                 <div class="mt-2">
-                    <label for="mentalHealthConditionDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please provide brief details, including dates and treatment received:</label>
-                    <textarea id="mentalHealthConditionDetails" name="mentalHealthConditionDetails" rows="4" class="form-textarea" placeholder="e.g., Diagnosed with depression in 2021, treated with CBT and medication (Sertraline) until 2023"></textarea>
+                    <label for="familyHistoryDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Relationship, condition, age of diagnosis):</label>
+                    <textarea id="familyHistoryDetails" name="familyHistoryDetails" rows="3" class="form-textarea" placeholder="e.g., Mother, Breast Cancer, diagnosed at 55"></textarea>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Do you engage in any hazardous hobbies or sports (e.g., rock climbing, scuba diving, aviation)?</label>
+                <div class="flex items-center gap-4">
+                    <label class="checkbox-label">
+                        <input type="radio" name="hazardousHobbies" value="Yes" class="checkbox-input"> Yes
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="hazardousHobbies" value="No" class="checkbox-input"> No
+                    </label>
+                </div>
+                <div class="mt-2">
+                    <label for="hazardousHobbiesDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                    <textarea id="hazardousHobbiesDetails" name="hazardousHobbiesDetails" rows="2" class="form-textarea" placeholder="e.g., Scuba diving, 2-3 times a year"></textarea>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-medium mb-1">Do you travel extensively or work in any high-risk countries?</label>
+                <div class="flex items-center gap-4">
+                    <label class="checkbox-label">
+                        <input type="radio" name="highRiskTravel" value="Yes" class="checkbox-input"> Yes
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="highRiskTravel" value="No" class="checkbox-input"> No
+                    </label>
+                </div>
+                <div class="mt-2">
+                    <label for="highRiskTravelDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                    <textarea id="highRiskTravelDetails" name="highRiskTravelDetails" rows="2" class="form-textarea" placeholder="e.g., Regular travel to conflict zones for work"></textarea>
                 </div>
             </div>
         </section>
 
-        <!-- Section 9: Family Medical History -->
         <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">9. Family Medical History</h2>
-            <p class="text-gray-700 text-sm italic">(Optional, but relevant for Critical Illness Underwriting)</p>
-            <p class="text-gray-700 text-sm">Have your parents or siblings ever been diagnosed with any of the following before age 65? Please tick all that apply and provide relation, illness, and age at diagnosis:</p>
-
-            <div class="space-y-4">
-                <div>
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">8. Declaration</h2>
+            <div>
+                <label class="block text-gray-700 text-sm font-medium mb-1">I confirm that the information provided in this questionnaire is accurate and complete to the best of my knowledge.</label>
+                <div class="flex items-center gap-4">
                     <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Cancer" class="checkbox-input"> Cancer
+                        <input type="checkbox" id="declaration" name="declaration" value="Agreed" class="checkbox-input" required> I Agree
                     </label>
-                    <textarea name="cancerDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis (e.g., Mother, Breast Cancer, 55)"></textarea>
                 </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Heart Attack / Coronary Artery Disease" class="checkbox-input"> Heart Attack / Coronary Artery Disease
-                    </label>
-                    <textarea name="heartDiseaseDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Stroke" class="checkbox-input"> Stroke
-                    </label>
-                    <textarea name="strokeDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Diabetes" class="checkbox-input"> Diabetes
-                    </label>
-                    <textarea name="diabetesDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Motor Neurone Disease" class="checkbox-input"> Motor Neurone Disease
-                    </label>
-                    <textarea name="motorNeuroneDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Multiple Sclerosis" class="checkbox-input"> Multiple Sclerosis
-                    </label>
-                    <textarea name="multipleSclerosisDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Huntington’s Disease" class="checkbox-input"> Huntington’s Disease
-                    </label>
-                    <textarea name="huntingtonsDetails" rows="2" class="form-textarea mt-1" placeholder="Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="familyHistoryCondition" value="Other" class="checkbox-input"> Other (please specify)
-                    </label>
-                    <textarea name="otherFamilyHistoryDetails" rows="3" class="form-textarea mt-1" placeholder="Specify Other illness(es) and provide Relation, Illness, Age at Diagnosis"></textarea>
-                </div>
+            </div>
+            <div>
+                <label for="signature" class="block text-gray-700 text-sm font-medium mb-1">Signature (Type your full name):</label>
+                <input type="text" id="signature" name="signature" class="form-input" placeholder="Type your full name as signature" required>
+            </div>
+            <div>
+                <label for="dateSigned" class="block text-gray-700 text-sm font-medium mb-1">Date:</label>
+                <input type="date" id="dateSigned" name="dateSigned" class="form-input" required>
             </div>
         </section>
-
-        <!-- Section 10: Bereavement & Personal Experience -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">10. Bereavement & Personal Experience</h2>
-            <p class="text-gray-700 text-sm italic">(Optional but insightful)</p>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Have you lost a close family member or friend where financial protection (or lack of it) significantly impacted the situation?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="bereavementImpact" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="bereavementImpact" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="bereavementImpactDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="bereavementImpactDetails" name="bereavementImpactDetails" rows="3" class="form-textarea" placeholder="e.g., Father passed away without life insurance, causing financial hardship for the family"></textarea>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Has a family member or friend experienced a serious illness that influenced your thoughts about your own protection needs?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="illnessInfluence" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="illnessInfluence" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2">
-                    <label for="illnessInfluenceDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide brief details:</label>
-                    <textarea id="illnessInfluenceDetails" name="illnessInfluenceDetails" rows="3" class="form-textarea" placeholder="e.g., Aunt had critical illness, highlighting the importance of critical illness cover"></textarea>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 11: Business Protection (if applicable) -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">11. Business Protection (if applicable)</h2></h2>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Are you a company director, shareholder, or business owner?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="businessOwner" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="businessOwner" value="No" class="checkbox-input"> No
-                    </label>
-                </div>
-                <div class="mt-2 mb-8">
-                    <label for="businessOwnerDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please specify role/business:</label>
-                    <input type="text" id="businessOwnerDetails" name="businessOwnerDetails" class="form-input" placeholder="e.g., Director, ABC Ltd.">
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Would you like to explore Relevant Life Plans or Executive Income Protection through your business?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="exploreBusinessPlans" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="exploreBusinessPlans" value="No" class="checkbox-input"> No
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="exploreBusinessPlans" value="Unsure" class="checkbox-input"> Unsure
-                    </label>
-                </div>
-            </div>
-            <div>
-                <label class="block text-gray-700 text-sm font-medium mb-1">Do you want to review Key Person Cover or Shareholder Protection arrangements?</label>
-                <div class="flex items-center gap-4">
-                    <label class="checkbox-label">
-                        <input type="radio" name="reviewBusinessProtection" value="Yes" class="checkbox-input"> Yes
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="reviewBusinessProtection" value="No" class="checkbox-input"> No
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" name="reviewBusinessProtection" value="Unsure" class="checkbox-input"> Unsure
-                    </label>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 12: Additional Notes / Comments -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">12. Additional Notes / Comments</h2>
-            <div>
-                <label for="additionalNotes" class="block text-gray-700 text-sm font-medium mb-1">Are there any personal concerns, preferences, or circumstances you’d like us to be aware of before our meeting?</label>
-                <textarea id="additionalNotes" name="additionalNotes" rows="5" class="form-textarea" placeholder="Enter any additional notes or comments here"></textarea>
-            </div>
-        </section>
-
-        <div class="mt-10 text-center">
-            <button type="submit" class="px-8 py-3 text-white font-semibold rounded-md shadow-md hover:bg-[#2f3a22] focus:outline-none focus:ring-2 focus:ring-[#2f3a22] focus:ring-offset-2 transition duration-200 ease-in-out" style="background-color: #91a081;">
-                Submit Questionnaire
-            </button>
+        
+        <div class="text-center">
+            <button type="submit">Submit Questionnaire</button>
         </div>
 </form>
+
     </div>
-</body>
 
 <script>
     const form = document.querySelector('form');
@@ -819,19 +609,18 @@
             e.preventDefault();
 
             // Create a FormData object directly from the form
+            // The browser will automatically set the correct 'multipart/form-data'
+            // Content-Type header when this is used directly as the body.
             const formData = new FormData(form);
 
             fetch(form.action, {
                 method: 'POST',
-                // IMPORTANT: Do NOT include 'Content-Type' header here.
-                // When sending FormData, the browser sets the correct
-                // 'multipart/form-data' header automatically.
+                // *** IMPORTANT: Do NOT include 'Content-Type' header here. ***
+                // Removing this header allows the browser to correctly format the request.
                 body: formData // Send the FormData object directly
             })
             .then(response => {
-                // Check if the response is OK (status 200) and if it's JSON
                 if (!response.ok) {
-                    // Check for 401 specifically for more helpful message
                     if (response.status === 401) {
                         throw new Error('Authentication failed. Check Google Apps Script deployment permissions (Execute as: Me, Who has access: Anyone).');
                     }
@@ -842,18 +631,18 @@
             .then(data => {
                 if (data.status === 'success') {
                     alert('Your questionnaire has been submitted successfully!');
-                    form.reset(); // Reset the form fields on success
+                    form.reset();
                 } else {
-                    // Display specific error message from Apps Script if status is not 'success'
                     alert(`Error: ${data.message || 'An unknown error occurred.'}`);
                 }
             })
             .catch(error => {
-                // Catch network errors or errors from the .then blocks
                 console.error('Error:', error);
                 alert('There was an error submitting your questionnaire. Please try again. Check console for details: ' + error.message);
             });
         });
     }
 </script>
+
+</body>
 </html>
