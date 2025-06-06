@@ -62,8 +62,8 @@
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 space-y-8">
         <!-- Logo Banner -->
         <header class="text-center mb-8">
-            <img src= "https://photos.app.goo.gl/6ZdYADxprMS3NmVA8" alt="Company Logo" class="mx-auto h-16">
-            <!-- Replace 'https://thartworks.github.io/Ideas/placeholder-logo.png' with the actual path to your PNG or SVG logo -->
+            <img src="images/placeholder-logo.png" alt="Company Logo" class="mx-auto h-16">
+            <!-- Replace 'placeholder-logo.png' with the actual path to your PNG or SVG logo -->
         </header>
 
         <!-- Title -->
@@ -818,24 +818,16 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = new FormData(form); // Get data as FormData object
-            // No need to manually convert to JSON or set content-type for basic form submission
+            const formData = new FormData(form);
 
             fetch(form.action, {
                 method: 'POST',
-                // No 'Content-Type' header needed here when sending FormData directly.
-                // The browser will automatically set it to 'multipart/form-data'
-                // or 'application/x-www-form-urlencoded' correctly.
-                body: formData // Send the FormData object directly
+                body: formData // Send data as application/x-www-form-urlencoded
             })
-            .then(response => response.json())
+            .then(response => response.text()) // Google Apps Script returns plain text
             .then(data => {
-                if (data.status === 'success') {
-                    alert('Your questionnaire has been submitted successfully!');
-                    form.reset();
-                } else {
-                    alert(`Error: ${data.message}`);
-                }
+                alert('Your questionnaire has been submitted successfully!');
+                form.reset();
             })
             .catch(error => {
                 console.error('Error:', error);
