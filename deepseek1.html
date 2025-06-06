@@ -831,6 +831,10 @@
             .then(response => {
                 // Check if the response is OK (status 200) and if it's JSON
                 if (!response.ok) {
+                    // Check for 401 specifically for more helpful message
+                    if (response.status === 401) {
+                        throw new Error('Authentication failed. Check Google Apps Script deployment permissions (Execute as: Me, Who has access: Anyone).');
+                    }
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json(); // Parse the JSON response from Apps Script
@@ -847,10 +851,9 @@
             .catch(error => {
                 // Catch network errors or errors from the .then blocks
                 console.error('Error:', error);
-                alert('There was an error submitting your questionnaire. Please try again. Check console for details.');
+                alert('There was an error submitting your questionnaire. Please try again. Check console for details: ' + error.message);
             });
         });
     }
 </script>
-
 </html>
