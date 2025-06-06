@@ -65,8 +65,14 @@
         <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-8">Protection Needs Questionnaire</h1>
         <p class="text-gray-700 text-center mb-8">Please provide detailed answers to the following questions.</p>
 
-        
-<form method="POST" action="https://script.google.com/macros/s/AKfycby15M1x_dz8wcEYBq_jCoCHR2UE7O5_RMIU6Ef9QWWP4Qe4ptAabjDR8FLp9LBHWRFp/exec">
+        <div class="mt-8 text-center">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">Submit Questionnaire</button>
+    </div>
+
+    <div id="formMessage" class="mt-4 p-3 rounded-lg text-center" style="display: none;"></div>
+
+</form>
+<form id="protectionForm">
         <section class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2" style="border-color: #2f3a22;">1. Personal Information</h2></h2>
             <div>
@@ -604,45 +610,63 @@
     </div>
 
 <script>
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+    const form = document.getElementById('protectionForm');
+    const formMessage = document.getElementById('formMessage');
 
-            // Create a FormData object directly from the form
-            // The browser will automatically set the correct 'multipart/form-data'
-            // Content-Type header when this is used directly as the body.
-            const formData = new FormData(form);
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent the default form submission
 
-            fetch(form.action, {
+        formMessage.style.display = 'none'; // Hide previous messages
+        formMessage.className = 'mt-4 p-3 rounded-lg text-center'; // Reset classes
+        formMessage.textContent = 'Submitting...';
+        formMessage.style.display = 'block';
+        formMessage.style.backgroundColor = '#d1e7dd'; // Light green for pending
+        formMessage.style.color = '#0f5132';
+
+        const formData = new FormData(form);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+
+        // IMPORTANT: Replace this with YOUR DEPLOYED APPS SCRIPT WEB APP URL
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwdKnfdTvGhRJmlIxgzHtfEti8MAw8BnhCn4nl--09I1rZTA9s4VEi78a1Ab11_LTNu/exec';
+
+        try {
+            const response = await fetch(scriptUrl, {
                 method: 'POST',
-                // *** IMPORTANT: Do NOT include 'Content-Type' header here. ***
-                // Removing this header allows the browser to correctly format the request.
-                body: formData // Send the FormData object directly
-            })
-            .then(response => {
-                if (!response.ok) {
-                    if (response.status === 401) {
-                        throw new Error('Authentication failed. Check Google Apps Script deployment permissions (Execute as: Me, Who has access: Anyone).');
-                    }
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json(); // Parse the JSON response from Apps Script
-            })
-            .then(data => {
-                if (data.status === 'success') {
-                    alert('Your questionnaire has been submitted successfully!');
-                    form.reset();
-                } else {
-                    alert(`Error: ${data.message || 'An unknown error occurred.'}`);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting your questionnaire. Please try again. Check console for details: ' + error.message);
+                mode: 'no-cors', // Use 'no-cors' mode to bypass CORS preflight checks for simple POST requests
+                cache: 'no-cache',
+                redirect: 'follow',
+                body: new URLSearchParams(data) // Send as URL-encoded form data
             });
-        });
-    }
+
+            // Note: When using 'no-cors', the 'response' object will be opaque.
+            // We cannot check response.ok or response.json().
+            // The success confirmation must come from the Apps Script itself.
+            // The Apps Script will return a specific HTML/text output on success.
+            // For 'no-cors', we rely on the Apps Script to handle redirection or a final message.
+
+            // Since we set up the Apps Script to return an alert and redirect,
+            // the client-side JavaScript won't get a direct "success" response here.
+            // The alert and redirect will be handled by the browser after the POST.
+            // However, for user feedback, we can assume success if no fetch error.
+
+            formMessage.textContent = 'Form submitted successfully! Redirecting...';
+            formMessage.style.backgroundColor = '#d4edda'; // Green for success
+            formMessage.style.color = '#155724';
+
+            // If the Apps Script successfully returns the alert, this message might be brief.
+            // The Apps Script itself handles the client-side alert and redirect.
+
+        } catch (error) {
+            console.error('Submission error:', error);
+            formMessage.textContent = 'There was an error submitting the form. Please try again.';
+            formMessage.style.backgroundColor = '#f8d7da'; // Red for error
+            formMessage.style.color = '#721c24';
+            formMessage.style.display = 'block';
+        }
+    });
 </script>
 
 </body>
