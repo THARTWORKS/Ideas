@@ -122,4 +122,532 @@
                 </div>
                 <div>
                     <label for="gpPracticeName" class="block text-gray-700 text-sm font-medium mb-1">GP Practice Name:</label>
-                    <input type="text"
+                    <input type="text" id="gpPracticeName" name="gpPracticeName" class="form-input" placeholder="Enter your GP practice name">
+                </div>
+                <div>
+                    <label for="practiceAddress" class="block text-gray-700 text-sm font-medium mb-1">Practice Address:</label>
+                    <textarea id="practiceAddress" name="practiceAddress" rows="3" class="form-textarea" placeholder="Enter your GP practice address"></textarea>
+                </div>
+                <div>
+                    <label for="gpContactNumber" class="block text-gray-700 text-sm font-medium mb-1">Contact Number (if known):</label>
+                    <input type="tel" id="gpContactNumber" name="gpContactNumber" class="form-input" placeholder="e.g., +44 1234 567890">
+                </div>
+                <div>
+                    <label for="gpRegistrationDuration" class="block text-gray-700 text-sm font-medium mb-1">How long have you been registered with this practice?</label>
+                    <input type="text" id="gpRegistrationDuration" name="gpRegistrationDuration" class="form-input" placeholder="e.g., 10 years">
+                </div>
+                <div>
+                    <label for="previousGpDetails" class="block text-gray-700 text-sm font-medium mb-1">Have you changed GP in the last 5 years? If yes, please provide previous details:</label>
+                    <textarea id="previousGpDetails" name="previousGpDetails" rows="4" class="form-textarea" placeholder="e.g., Dr. Smith, ABC Practice, 2018-2020"></textarea>
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">3. Employment & Income</h2>
+                <div>
+                    <label for="occupation" class="block text-gray-700 text-sm font-medium mb-1">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation" class="form-input" placeholder="e.g., Software Engineer">
+                </div>
+                <div>
+                    <label for="jobTitleDescription" class="block text-gray-700 text-sm font-medium mb-1">Job Title/Description of Duties:</label>
+                    <textarea id="jobTitleDescription" name="jobTitleDescription" rows="3" class="form-textarea" placeholder="Briefly describe your job title and main duties"></textarea>
+                </div>
+                <div>
+                    <label for="employmentStatus" class="block text-gray-700 text-sm font-medium mb-1">Employment Status:</label>
+                    <select id="employmentStatus" name="employmentStatus" class="form-select">
+                        <option value="">Select status</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Self-employed">Self-employed</option>
+                        <option value="Director">Director</option>
+                        <option value="Contractor">Contractor</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="grossAnnualIncome" class="block text-gray-700 text-sm font-medium mb-1">Gross Annual Income:</label>
+                        <input type="number" id="grossAnnualIncome" name="grossAnnualIncome" class="form-input" placeholder="e.g., 50000">
+                    </div>
+                    <div>
+                        <label for="netMonthlyIncome" class="block text-gray-700 text-sm font-medium mb-1">Net Monthly Income:</label>
+                        <input type="number" id="netMonthlyIncome" name="netMonthlyIncome" class="form-input" placeholder="e.g., 3000">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you receive variable income (e.g. bonuses, commissions, dividends)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="variableIncome" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="variableIncome" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="variableIncomeDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="variableIncomeDetails" name="variableIncomeDetails" rows="2" class="form-textarea" placeholder="e.g., Annual bonus, 10% commission"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label for="selfEmployedYears" class="block text-gray-700 text-sm font-medium mb-1">If self-employed, how many years have you been trading?</label>
+                    <input type="number" id="selfEmployedYears" name="selfEmployedYears" class="form-input" placeholder="e.g., 5">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you receive any employer sick pay?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="employerSickPay" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="employerSickPay" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="sickPayDuration" class="block text-gray-700 text-sm font-medium mb-1">If Yes, how long is it paid for?</label>
+                        <input type="text" id="sickPayDuration" name="sickPayDuration" class="form-input" placeholder="e.g., 6 months at full pay">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Are you a member of any workplace death-in-service or group income protection scheme?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="workplaceScheme" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="workplaceScheme" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="workplaceSchemeDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="workplaceSchemeDetails" name="workplaceSchemeDetails" rows="2" class="form-textarea" placeholder="e.g., Death-in-service 4x salary"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you have other income sources (e.g. rental income, investments)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="otherIncome" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="otherIncome" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="otherIncomeDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please specify:</label>
+                        <textarea id="otherIncomeDetails" name="otherIncomeDetails" rows="2" class="form-textarea" placeholder="e.g., Rental income £500/month"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">4. Existing Protection Policies</h2>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you currently have any Life Insurance?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="lifeInsurance" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="lifeInsurance" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="lifeInsuranceDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please provide details (Insurer, cover amount, policy type, term, monthly premium, and if written in trust):</label>
+                        <textarea id="lifeInsuranceDetails" name="lifeInsuranceDetails" rows="4" class="form-textarea" placeholder="e.g., Aviva, £200k, Level Term, 20 years, £30/month, Written in Trust"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you have any Critical Illness Cover?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="criticalIllnessCover" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="criticalIllnessCover" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="criticalIllnessDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please provide details:</label>
+                        <textarea id="criticalIllnessDetails" name="criticalIllnessDetails" rows="4" class="form-textarea" placeholder="e.g., Legal & General, £100k, until age 65, £25/month"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you have any Income Protection Cover?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="incomeProtectionCover" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="incomeProtectionCover" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="incomeProtectionDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please provide details:</label>
+                        <textarea id="incomeProtectionDetails" name="incomeProtectionDetails" rows="4" class="form-textarea" placeholder="e.g., Royal London, £1500/month after 3-month deferral, until retirement, £40/month"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Are any of these policies provided by your employer?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="employerProvidedPolicies" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="employerProvidedPolicies" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="employerProvidedPoliciesDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please specify which ones:</label>
+                        <input type="text" id="employerProvidedPoliciesDetails" name="employerProvidedPoliciesDetails" class="form-input" placeholder="e.g., Death-in-service & Group Income Protection">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever had an insurance application declined, postponed, or offered on special terms?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="applicationHistory" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="applicationHistory" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="applicationHistoryDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="applicationHistoryDetails" name="applicationHistoryDetails" rows="3" class="form-textarea" placeholder="e.g., Life insurance declined due to high blood pressure in 2020"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">5. Financial Responsibilities</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="mortgageOutstanding" class="block text-gray-700 text-sm font-medium mb-1">Mortgage Outstanding:</label>
+                        <input type="number" id="mortgageOutstanding" name="mortgageOutstanding" class="form-input" placeholder="e.g., 250000">
+                    </div>
+                    <div>
+                        <label for="monthlyMortgagePayment" class="block text-gray-700 text-sm font-medium mb-1">Monthly Mortgage Payment:</label>
+                        <input type="number" id="monthlyMortgagePayment" name="monthlyMortgagePayment" class="form-input" placeholder="e.g., 1200">
+                    </div>
+                </div>
+                <div>
+                    <label for="mortgageType" class="block text-gray-700 text-sm font-medium mb-1">Mortgage Type:</label>
+                    <select id="mortgageType" name="mortgageType" class="form-select">
+                        <option value="">Select type</option>
+                        <option value="Repayment">Repayment</option>
+                        <option value="Interest-Only">Interest-Only</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="homeOwnership" class="block text-gray-700 text-sm font-medium mb-1">Do you rent or own your home?</label>
+                    <input type="text" id="homeOwnership" name="homeOwnership" class="form-input" placeholder="e.g., Own, Rent">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Any other debts or significant financial commitments (loans, credit cards, personal finance agreements)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="otherDebts" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="otherDebts" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="otherDebtsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Type, amount, monthly payment):</label>
+                        <textarea id="otherDebtsDetails" name="otherDebtsDetails" rows="4" class="form-textarea" placeholder="e.g., Car loan: £15,000 outstanding, £300/month"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label for="financialCommitmentDuration" class="block text-gray-700 text-sm font-medium mb-1">How long would you be able to maintain your financial commitments if your income stopped due to illness or accident?</label>
+                    <input type="text" id="financialCommitmentDuration" name="financialCommitmentDuration" class="form-input" placeholder="e.g., 3 months, 1 year">
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">6. Cover Objectives</h2>
+                <div>
+                    <label for="coverPriorities" class="block text-gray-700 text-sm font-medium mb-1">What are your main priorities for protection? (e.g. mortgage protection, income replacement, children’s future, inheritance, business continuity)</label>
+                    <textarea id="coverPriorities" name="coverPriorities" rows="4" class="form-textarea" placeholder="Describe your main priorities"></textarea>
+                </div>
+                <div>
+                    <label for="coverTypeInterest" class="block text-gray-700 text-sm font-medium mb-1">Are you interested in joint cover or individual cover (or both)?</label>
+                    <input type="text" id="coverTypeInterest" name="coverTypeInterest" class="form-input" placeholder="e.g., Joint, Individual, Both">
+                </div>
+                <div>
+                    <label for="monthlyBudget" class="block text-gray-700 text-sm font-medium mb-1">Do you have a monthly budget or cost range in mind for protection?</label>
+                    <input type="number" id="monthlyBudget" name="monthlyBudget" class="form-input" placeholder="e.g., 50">
+                </div>
+                <div>
+                    <label for="premiumPreference" class="block text-gray-700 text-sm font-medium mb-1">Do you want your cover to remain fixed (guaranteed premiums) or to review over time?</label>
+                    <input type="text" id="premiumPreference" name="premiumPreference" class="form-input" placeholder="e.g., Fixed, Review">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Are you interested in placing life cover into trust (to help with probate and inheritance tax planning)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="lifeCoverInTrust" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="lifeCoverInTrust" value="No" class="checkbox-input"> No
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="lifeCoverInTrust" value="Unsure" class="checkbox-input"> Unsure / Need more information
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you have a Will in place?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="hasWill" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="hasWill" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 pb-2 mb-8" style="border-color: #2f3a22;">7. Health & Lifestyle</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <label for="heightCm" class="block text-gray-700 text-sm font-medium mb-1">Height (cm):</label>
+                        <input type="number" id="heightCm" name="heightCm" class="form-input" placeholder="e.g., 175">
+                    </div>
+                    <div>
+                        <label for="heightFeet" class="block text-gray-700 text-sm font-medium mb-1">Height (ft):</label>
+                        <input type="number" id="heightFeet" name="heightFeet" class="form-input" placeholder="e.g., 5">
+                    </div>
+                    <div>
+                        <label for="heightInches" class="block text-gray-700 text-sm font-medium mb-1">Height (inches):</label>
+                        <input type="number" id="heightInches" name="heightInches" class="form-input" placeholder="e.g., 9">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="weightKg" class="block text-gray-700 text-sm font-medium mb-1">Weight (kg):</label>
+                        <input type="number" id="weightKg" name="weightKg" class="form-input" placeholder="e.g., 70">
+                    </div>
+                    <div>
+                        <label for="weightLbs" class="block text-gray-700 text-sm font-medium mb-1">Weight (lbs):</label>
+                        <input type="number" id="weightLbs" name="weightLbs" class="form-input" placeholder="e.g., 154">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you smoke, vape, or use any nicotine products?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="nicotineUse" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="nicotineUse" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="nicotineDetails" class="block text-gray-700 text-sm font-medium mb-1">If yes, please specify frequency and date last used:</label>
+                        <textarea id="nicotineDetails" name="nicotineDetails" rows="2" class="form-textarea" placeholder="e.g., Smokes 5 cigarettes/day, last used 2 days ago"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever used nicotine alternatives (e.g. patches, gum)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="nicotineAlternatives" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="nicotineAlternatives" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="nicotineAlternativesDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="nicotineAlternativesDetails" name="nicotineAlternativesDetails" rows="2" class="form-textarea" placeholder="e.g., Used nicotine patches for 3 months in 2021"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label for="alcoholConsumption" class="block text-gray-700 text-sm font-medium mb-1">Alcohol consumption (average units per week):</label>
+                    <input type="number" id="alcoholConsumption" name="alcoholConsumption" class="form-input" placeholder="e.g., 10">
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever received treatment or counselling for alcohol use?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="alcoholTreatment" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="alcoholTreatment" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="alcoholTreatmentDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="alcoholTreatmentDetails" name="alcoholTreatmentDetails" rows="2" class="form-textarea" placeholder="e.g., Attended AA meetings in 2022"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever used recreational drugs?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="recreationalDrugs" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="recreationalDrugs" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="recreationalDrugsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (type, frequency, last used):</label>
+                        <textarea id="recreationalDrugsDetails" name="recreationalDrugsDetails" rows="2" class="form-textarea" placeholder="e.g., Cannabis, occasionally, 6 months ago"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Are you currently receiving any medication or have you in the last 5 years?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="currentMedication" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="currentMedication" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="currentMedicationDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please list (Medication, dosage, condition treated):</label>
+                        <textarea id="currentMedicationDetails" name="currentMedicationDetails" rows="3" class="form-textarea" placeholder="e.g., Lisinopril, 10mg, High Blood Pressure"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you ever been diagnosed with or received treatment for any medical condition, illness, or disability?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="medicalCondition" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="medicalCondition" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="medicalConditionDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Condition, diagnosis date, treatment, current status):</label>
+                        <textarea id="medicalConditionDetails" name="medicalConditionDetails" rows="4" class="form-textarea" placeholder="e.g., Type 2 Diabetes, diagnosed 2015, managed with diet and metformin, well-controlled"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you had any medical tests, investigations, or referrals to specialists in the last 5 years?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="medicalTests" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="medicalTests" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="medicalTestsDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="medicalTestsDetails" name="medicalTestsDetails" rows="3" class="form-textarea" placeholder="e.g., ECG in 2023 for chest pain, results normal"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do any of your immediate family (parents, siblings) have a history of heart disease, cancer, stroke, diabetes, or other hereditary conditions before age 60?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="familyMedicalHistory" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="familyMedicalHistory" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="familyMedicalHistoryDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (Condition, relationship, age of diagnosis):</label>
+                        <textarea id="familyMedicalHistoryDetails" name="familyMedicalHistoryDetails" rows="3" class="form-textarea" placeholder="e.g., Father, Heart Disease, diagnosed at 55"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Do you participate in any hazardous hobbies or sports (e.g., mountaineering, diving, aviation, motor racing)?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="hazardousHobbies" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="hazardousHobbies" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="hazardousHobbiesDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details:</label>
+                        <textarea id="hazardousHobbiesDetails" name="hazardousHobbiesDetails" rows="2" class="form-textarea" placeholder="e.g., Scuba diving, 2-3 times a year"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-gray-700 text-sm font-medium mb-1">Have you traveled or do you intend to travel outside of the UK for more than 1 month in the next 12 months?</label>
+                    <div class="flex items-center gap-4">
+                        <label class="checkbox-label">
+                            <input type="radio" name="travelOutsideUK" value="Yes" class="checkbox-input"> Yes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="radio" name="travelOutsideUK" value="No" class="checkbox-input"> No
+                        </label>
+                    </div>
+                    <div class="mt-2">
+                        <label for="travelOutsideUKDetails" class="block text-gray-700 text-sm font-medium mb-1">If Yes, please provide details (destination, duration, purpose):</label>
+                        <textarea id="travelOutsideUKDetails" name="travelOutsideUKDetails" rows="2" class="form-textarea" placeholder="e.g., Thailand, 2 months, holiday"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mt-8 text-center">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">Submit Questionnaire</button>
+            </div>
+
+            <div id="formMessage" class="mt-4 p-3 rounded-lg text-center" style="display: none;"></div>
+
+        </form>
+        </div>
+
+    <script>
+        const form = document.getElementById('protectionForm');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent the default form submission
+
+            formMessage.style.display = 'none'; // Hide previous messages
+            formMessage.className = 'mt-4 p-3 rounded-lg text-center'; // Reset classes
+            formMessage.textContent = 'Submitting...';
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = '#d1e7dd'; // Light green for pending
+            formMessage.style.color = '#0f5132';
+
+            const formData = new FormData(form);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            // IMPORTANT: Replace this with YOUR DEPLOYED APPS SCRIPT WEB APP URL
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwdKnfdTvGhRJmlIxgzHtfEti8MAw8BnhCn4nl--09I1rZTA9s4VEi78a1Ab11_LTNu/exec'; // Make sure this is YOUR correct URL
+
+            try {
+                const response = await fetch(scriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Use 'no-cors' mode to bypass CORS preflight checks for simple POST requests
+                    cache: 'no-cache',
+                    redirect: 'follow',
+                    body: new URLSearchParams(data) // Send as URL-encoded form data
+                });
+
+                // With 'no-cors', we can't directly inspect the response object (e.g., response.ok, response.status)
+                // We assume success if the fetch operation itself completes without a network error.
+                formMessage.textContent = 'Form submitted successfully!';
+                formMessage.style.backgroundColor = '#d4edda'; // Green for success
+                formMessage.style.color = '#155724';
+
+                // Optional: Clear the form after successful submission
+                form.reset();
+
+            } catch (error) {
+                console.error('Submission error:', error);
+                formMessage.textContent = 'There was an error submitting the form. Please try again.';
+                formMessage.style.backgroundColor = '#f8d7da'; // Red for error
+                formMessage.style.color = '#721c24';
+                formMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
