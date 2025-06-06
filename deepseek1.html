@@ -818,20 +818,36 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
+            // Create a FormData object directly from the form
             const formData = new FormData(form);
 
             fetch(form.action, {
                 method: 'POST',
-                body: formData // Send data as application/x-www-form-urlencoded
+                // IMPORTANT: Do NOT include 'Content-Type' header here.
+                // When sending FormData, the browser sets the correct
+                // 'multipart/form-data' header automatically.
+                body: formData // Send the FormData object directly
             })
-            .then(response => response.text()) // Google Apps Script returns plain text
+            .then(response => {
+                // Check if the response is OK (status 200) and if it's JSON
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json(); // Parse the JSON response from Apps Script
+            })
             .then(data => {
-                alert('Your questionnaire has been submitted successfully!');
-                form.reset();
+                if (data.status === 'success') {
+                    alert('Your questionnaire has been submitted successfully!');
+                    form.reset(); // Reset the form fields on success
+                } else {
+                    // Display specific error message from Apps Script if status is not 'success'
+                    alert(`Error: ${data.message || 'An unknown error occurred.'}`);
+                }
             })
             .catch(error => {
+                // Catch network errors or errors from the .then blocks
                 console.error('Error:', error);
-                alert('There was an error submitting your questionnaire. Please try again.');
+                alert('There was an error submitting your questionnaire. Please try again. Check console for details.');
             });
         });
     }
