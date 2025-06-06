@@ -818,32 +818,15 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = new FormData(form);
-            const data = {};
-            for (const [key, value] of formData.entries()) {
-                if (data[key]) {
-                    if (!Array.isArray(data[key])) {
-                        data[key] = [data[key]];
-                    }
-                    data[key].push(value);
-                } else {
-                    data[key] = value;
-                }
-            }
-
-            // Convert array values to comma-separated strings
-            for (const key in data) {
-                if (Array.isArray(data[key])) {
-                    data[key] = data[key].join(', ');
-                }
-            }
+            const formData = new FormData(form); // Get data as FormData object
+            // No need to manually convert to JSON or set content-type for basic form submission
 
             fetch(form.action, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
+                // No 'Content-Type' header needed here when sending FormData directly.
+                // The browser will automatically set it to 'multipart/form-data'
+                // or 'application/x-www-form-urlencoded' correctly.
+                body: formData // Send the FormData object directly
             })
             .then(response => response.json())
             .then(data => {
